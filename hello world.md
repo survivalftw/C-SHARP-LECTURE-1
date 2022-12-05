@@ -1,12 +1,12 @@
-# Первый файл по контролю версий
+# First source control file
 
-Getting started with our version control lessons.
+Getting started with our source control lessons.
 
 *italics*
 
 **bold**
 
-## Списки
+## Lists
 
 * unit 1
 * unit 2
