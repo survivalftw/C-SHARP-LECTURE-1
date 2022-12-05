@@ -1,12 +1,12 @@
 # Первый файл по контролю версий
 
-## Выделение текста
-
 Getting started with our version control lessons.
 
 *italics*
 
 **bold**
+
+## Списки
 
 * unit 1
 * unit 2
