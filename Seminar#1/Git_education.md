@@ -75,3 +75,18 @@ To change the name of last commit use next command (where mesage is the new name
 git --amend commit -m "<mesage>"
 ```
 
+## New folder creation
+
+To create a new folder in selected repository use next command:
+
+```
+mkdir <FOLDER_NAME>
+```
+
+## Terminal command history
+
+To track the history of all used commands (within terminal) use next command:
+
+```
+history
+```
