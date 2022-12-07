@@ -18,3 +18,12 @@ To add a file to repository use next command:
 ```
 git add <FILE_NAME>
 ```
+
+## Checking repository status
+
+To check repository status use next command:
+
+```
+git status
+```
+
