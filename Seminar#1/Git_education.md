@@ -50,3 +50,12 @@ To switch between different repository commits use next command:
 ```
 git checkout <fist four letters of commit name>
 ```
+
+## Returning to current (master) commit
+
+To return to master commit and continue work use next command:
+
+```
+git checkout master
+```
+
