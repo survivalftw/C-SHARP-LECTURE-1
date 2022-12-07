@@ -72,6 +72,6 @@ git diff
 To change the name of last commit use next command (where mesage is the new name of last commit):
 
 ```
-git --amend -m "<mesage>"
+git --amend commit -m "<mesage>"
 ```
 
