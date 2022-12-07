@@ -59,3 +59,11 @@ To return to master commit and continue work use next command:
 git checkout master
 ```
 
+## Comparing the difference between current and last commited version
+
+To see the differnce between current uncommited file and it's last commited version use next command:
+
+```
+git diff
+```
+
