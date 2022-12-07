@@ -67,3 +67,11 @@ To see the differnce between current uncommited file and it's last commited vers
 git diff
 ```
 
+## Changing last commit name
+
+To change the name of last commit use next command (where mesage is the new name of last commit):
+
+```
+git --amend -m "<mesage>"
+```
+
