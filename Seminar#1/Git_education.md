@@ -43,3 +43,10 @@ To track log of recent repository actions use next command:
 git log
 ```
 
+## Switching between commits
+
+To switch between different repository commits use next command:
+
+```
+git checkout <fist four letters of commit name>
+```
