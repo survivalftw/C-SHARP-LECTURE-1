@@ -27,3 +27,19 @@ To check repository status use next command:
 git status
 ```
 
+## Commiting repository changes
+
+To commit new repository changes use next command (where message describes what is changed):
+
+```
+git commit -m "<message>"
+```
+
+## Reviewing repository log
+
+To track log of recent repository actions use next command:
+
+```
+git log
+```
+
