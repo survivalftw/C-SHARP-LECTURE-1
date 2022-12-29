@@ -8,12 +8,19 @@ int B = int.Parse(Console.ReadLine());
 
 int Pow = GetExponentiationBaseAPowerB(A, B);
 
-Console.WriteLine(Pow);
+if (B>=0)
+{
+    Console.WriteLine(Pow);
+}
+else
+{
+    Console.WriteLine("1/" + Pow);
+}
 
 int GetExponentiationBaseAPowerB(int A, int B)
 {
     int Pow = 1;
-    for (var i = 1; i <= B; i++)
+    for (var i = 1; i <= Math.Abs(B); i++)
     {
         Pow = Pow * A;
     }
