@@ -36,20 +36,15 @@ void PrintArray(int[,] array)
     }
 }
 
-
 void FindArrayRowSumMinimum(int[,] array)
 {
     int memoryMinSum = 0;
     int rowNubmer = 1;
-    for (var i = 0; i < 1; i += 1)
+    for (var j = 0; j < array.GetLength(1); j += 1)
     {
-        int count = 0;
-        for (var j = 0; j < array.GetLength(1); j += 1)
-        {
-            count = count + array[i,j];
-        }
-        memoryMinSum = count;
+        memoryMinSum = memoryMinSum + array[0,j];
     }
+
     for (var i = 1; i < array.GetLength(0); i += 1)
     {
         int count = 0;
