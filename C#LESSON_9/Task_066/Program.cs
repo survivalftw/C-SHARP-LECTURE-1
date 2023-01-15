@@ -1,20 +1,43 @@
-﻿Console.Write("Enter N:\t");
+﻿Console.Write("Enter M:\t");
+int m = int.Parse(Console.ReadLine());
+Console.Write("Enter N:\t");
 int n = int.Parse(Console.ReadLine());
-if (n > 0)
+int sum = 0;
+
+if (n > 0 && m > 0)
+{
+if (n > m)
 {
     MyMethod(n);
     void MyMethod(int i)
     {
-    if (i == 0)
+    if (i == m - 1)
     {
         return;
     }
-    Console.WriteLine(i);
+    sum = sum + i;
     i -= 1;
     MyMethod(i);
     }
+Console.WriteLine("Natural numbers sum between M and N is " + sum);
 }
 else
 {
-    Console.WriteLine("N is <= 0");
+    MyMethod(m);
+    void MyMethod(int i)
+    {
+    if (i == n - 1)
+    {
+        return;
+    }
+    sum = sum + i;
+    i -= 1;
+    MyMethod(i);
+    }
+Console.WriteLine("Natural numbers sum between M and N is " + sum);
+}
+}
+else
+{
+    Console.WriteLine("N or M <= 0");
 }
