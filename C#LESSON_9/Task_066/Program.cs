@@ -16,5 +16,5 @@ if (n > 0)
 }
 else
 {
-    Console.WriteLine("N <= 0");
+    Console.WriteLine("N is <= 0");
 }
