@@ -4,17 +4,11 @@ Console.Write("Enter Array n dimension size:\t");
 int n = int.Parse(Console.ReadLine());
 
 int[,] array = GetArrayRandom(m,n);
-
 GetArrayRandom(m, n);
 PrintArray(array);
 Console.WriteLine();
 int[,] result = CopyArray (array);
-int a = 0;
-while (a < result.GetLength(1))
-{
-    CreateArrayRowDescending(result);
-    a = a + 1;
-}
+CreateArrayRowDescending(result);
 PrintArray(result);
 
 int[,] GetArrayRandom(int m, int n)
@@ -58,17 +52,22 @@ return result;
 
 void CreateArrayRowDescending(int[,] result)
 {
+    int a = 0;
     int memoryOne = 0;
-    for (var i = 0; i < result.GetLength(0); i += 1)
+    while (a < result.GetLength(1))
     {
-        for (var j = 0; j < result.GetLength(1) - 1; j += 1)
+        for (var i = 0; i < result.GetLength(0); i += 1)
         {
-            if (result[i,j+1] > result[i,j])
-            {  
-                memoryOne = result[i,j];
-                result[i,j] = result[i,j+1];
-                result[i,j+1] = memoryOne;
+            for (var j = 0; j < result.GetLength(1) - 1; j += 1)
+            {
+                if (result[i,j+1] > result[i,j])
+                {  
+                    memoryOne = result[i,j];
+                    result[i,j] = result[i,j+1];
+                    result[i,j+1] = memoryOne;
+                }
             }
         }
-    }    
+    a = a + 1;
+    }  
 }
