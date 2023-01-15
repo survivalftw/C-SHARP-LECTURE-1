@@ -44,7 +44,6 @@ void FindArrayRowSumMinimum(int[,] array)
     {
         memoryMinSum = memoryMinSum + array[0,j];
     }
-
     for (var i = 1; i < array.GetLength(0); i += 1)
     {
         int count = 0;
