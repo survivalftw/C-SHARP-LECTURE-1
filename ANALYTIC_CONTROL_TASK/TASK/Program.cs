@@ -14,7 +14,10 @@ string H = Console.ReadLine();
 string[] InitialArray = new string[] {A,B,C,D,E,F,G,H};
 
 string[] result = CreateArray();
-PrintArray(result);
+int[] countresult = CreateUnitCountArray();
+PrintStringArray(result);
+Console.Write("\n");
+PrintIntArray(countresult);
 
 string[] CreateArray()
 {
@@ -26,7 +29,7 @@ string[] CreateArray()
     return array;
 }
 
-void PrintArray(string[] array)
+void PrintStringArray(string[] array)
 {
     Console.Write("[");
     for (var i = 0; i < array.Length-1; i++)
@@ -37,14 +40,24 @@ void PrintArray(string[] array)
     Console.Write("]");
 }
 
-/*
-string[] CreateArrayLessThanThreeSymbols()
+void PrintIntArray(int[] array)
 {
-    string[] array = new string [size];  
+    Console.Write("[");
+    for (var i = 0; i < array.Length-1; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.Write(array[array.Length-1]);
+    Console.Write("]");
+}
+
+int[] CreateUnitCountArray()
+{
+    int[] array = new int [size];  
     for (var i = 0; i < array.Length; i++)
     {
-        array[i] = InitialArray[i];
+        array[i] = InitialArray[i].Length;
     }
     return array;
 }
-*/
+
