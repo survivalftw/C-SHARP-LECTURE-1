@@ -1,4 +1,5 @@
 ﻿int size = 8;
+Console.Write("This program will form string array using only 3 or below characters elements out of given string array.\n");
 Console.Write("Enter " + size);
 Console.Write(" string array elements and press Enter:\n");
 
@@ -14,28 +15,15 @@ string H = Console.ReadLine();
 string[] InitialArray = new string[] {A,B,C,D,E,F,G,H};
 
 string[] basearray = CreateArray();
-int[] countresultarray = CreateUnitCountArray();
-string[] resultarray = CreateZeroArray();
+string[] resultarray = CreateResultArray();
 Console.Write("\n");
 Console.Write("Initial Array:\t");
 PrintStringArray(basearray);
 Console.Write("\n");
-PrintIntArray(countresultarray);
-Console.Write("\n");
+Console.Write("3 or below string characters Array:\t");
 PrintStringArray(resultarray);
 
 void PrintStringArray(string[] array)
-{
-    Console.Write("[");
-    for (var i = 0; i < array.Length-1; i++)
-    {
-        Console.Write($"{array[i]}, ");
-    }
-    Console.Write(array[array.Length-1]);
-    Console.Write("]");
-}
-
-void PrintIntArray(int[] array)
 {
     Console.Write("[");
     for (var i = 0; i < array.Length-1; i++)
@@ -56,57 +44,7 @@ string[] CreateArray()
     return array;
 }
 
-int[] CreateUnitCountArray()
-{
-    int[] array = new int [size];  
-    for (var i = 0; i < array.Length; i++)
-    {
-        array[i] = InitialArray[i].Length;
-    }
-    return array;
-}
-
-/*
 string[] CreateResultArray()
-{
-    string[] array = InitialArray;
-    int index = 2;    
-    for (var i = index; i < array.Length - 1; i++)    
-    {
-        array[i] = array[i + 1];
-    }
-    Array.Resize(ref array, array.Length - 1);
-    return array;
-}
-
-
-string[] CreateResultArray()
-{
-    string[] zeroarray = {0};
-    string[] array = InitialArray;  
-    for (var i = 0; i < array.Length; i++)
-    {
-        if (array[i].Length > 3)
-        {
-            
-        }
-    }
-    return array; 
-}
-*/
-
-static void Insert(ref string[] array, string value, int index)
-{
-    string[] newArray = new string [array.Length + 1];
-    newArray[index] = value;
-    for (int i = 0; i < index; i++)
-        newArray[i] = array[i];
-    for (int i = index; i < array.Length; i++)
-        newArray[i + 1] = array[i];
-    array = newArray;
-}
-
-string[] CreateZeroArray()
 {
     string[] array = {InitialArray[0]};
     int index = 1;
@@ -126,4 +64,15 @@ string[] CreateZeroArray()
     }
     Array.Resize(ref array, array.Length - 1);
     return array;
+}
+
+static void Insert(ref string[] array, string value, int index)
+{
+    string[] newArray = new string [array.Length + 1];
+    newArray[index] = value;
+    for (int i = 0; i < index; i++)
+        newArray[i] = array[i];
+    for (int i = index; i < array.Length; i++)
+        newArray[i + 1] = array[i];
+    array = newArray;
 }
