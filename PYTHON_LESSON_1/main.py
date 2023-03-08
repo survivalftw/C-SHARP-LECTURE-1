@@ -1,0 +1,6 @@
+print("Input first number: ")
+a = float(input())
+print("Input second number: ")
+b = float(input())
+print(a,' + ', b, ' = ', round(a + b, 3))
+print(type(a), type(b))
